@@ -5,17 +5,24 @@
   box-sizing: border-box;
 }
 .cardInner {
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   height: 100%;
 }
 
 .image {
+  width: 100%;
+  height: 100%;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 
     border-radius: var(--radius05);
+    overflow-clip-margin: unset;
   }
 }
 
@@ -42,6 +49,16 @@
     height: 100%;
   }
   g {
+  }
+
+  .filled {
+    opacity: 0;
+    fill: var(--red);
+    transition: var(--transition02s);
+  }
+  .empty {
+    opacity: 1;
+    transition: var(--transition02s);
   }
 }
 .name {

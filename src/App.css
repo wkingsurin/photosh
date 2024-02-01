@@ -30,3 +30,8 @@
   padding: 0 15px;
   box-sizing: content-box;
 }
+
+.wrapper .likeActive {
+  fill: var(--red);
+  opacity: 1;
+}
