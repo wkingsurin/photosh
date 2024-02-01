@@ -11,7 +11,7 @@ export function Card(props) {
         </div>
         <div className={cardStyles.cardPanel}>
           <div className={cardStyles.like}>
-            <LikeEmpty cardStyles={cardStyles} />
+            <LikeEmpty styles={cardStyles} />
           </div>
           <span className={cardStyles.name}>{props.name}</span>
         </div>

@@ -1,6 +1,7 @@
 import mainStyles from "./Main.module.scss";
 
 import { Card } from "../Card";
+import { ScaledImage } from "../ScaledImage/ScaledImage";
 
 import { peopleRu, peopleEu } from "../../people";
 import { getPeopleRu } from "../../api";
@@ -22,6 +23,7 @@ export function Main() {
             })}
           </div>
         </div>
+        {/* <ScaledImage /> */}
       </section>
     </main>
   );

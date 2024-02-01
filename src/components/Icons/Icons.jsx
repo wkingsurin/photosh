@@ -121,7 +121,7 @@ export function ProfileSVG() {
   );
 }
 
-export function LikeEmpty({ cardStyles }) {
+export function LikeEmpty({ styles }) {
   return (
     <svg
       version="1.0"
@@ -137,7 +137,7 @@ export function LikeEmpty({ cardStyles }) {
         stroke="#000000"
       >
         <path
-          className={cardStyles.filled}
+          className={styles.filled}
           id="filled"
           d="M1435 4349 c-515 -47 -925 -432 -1032 -967 -24 -122 -24 -368 0 -480
 108 -499 511 -1026 1216 -1587 287 -228 672 -490 767 -521 83 -27 265 -27 349
@@ -147,7 +147,7 @@ export function LikeEmpty({ cardStyles }) {
 250z"
         />
         <path
-          className={cardStyles.empty}
+          className={styles.empty}
           id="empty"
           d="M1385 4350 c-382 -60 -697 -287 -870 -626 -155 -304 -179 -682 -64
 -1011 192 -548 779 -1170 1669 -1769 238 -160 285 -179 440 -179 146 0 203 22
