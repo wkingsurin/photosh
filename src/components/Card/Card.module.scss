@@ -1,0 +1,48 @@
+.card {
+  flex: 0 0 33.333%;
+
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.cardInner {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: var(--radius05);
+  }
+}
+
+.cardPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 15px 0 15px;
+  box-sizing: border-box;
+}
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  g {
+  }
+}
+.name {
+}

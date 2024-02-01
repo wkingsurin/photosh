@@ -1,0 +1,13 @@
+.main {
+}
+.section {
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+
+  margin: 0 -15px;
+  padding: 70px 0;
+  box-sizing: border-box;
+}

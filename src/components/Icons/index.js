@@ -1,1 +1,1 @@
-export { LogoSVG, ProfileSVG } from "./Icons";
+export { LogoSVG, ProfileSVG, LikeEmpty } from "./Icons";

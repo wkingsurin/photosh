@@ -2,7 +2,7 @@ import headerStyles from "./Header.module.scss";
 
 import { LogoSVG, ProfileSVG } from "../Icons";
 
-export default function Header() {
+export function Header() {
   return (
     <header className={headerStyles.header}>
       <div className="container">
