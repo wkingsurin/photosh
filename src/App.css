@@ -1,0 +1,9 @@
+:root {
+  --gray: #f0f0f0;
+  --cyan: #66e5ed;
+  --red: #ed6666;
+  --overlay: rgba(0, 0, 0, 0.75);
+
+  --shadow03: 0 0 19px 15px rgba(0, 0, 0, 0.03);
+  --shadow15: 0 0 19px 15px rgba(0, 0, 0, 0.15);
+}
