@@ -1,26 +1,45 @@
-import { targetIsImg, targetIsSvg, setCurrentScroll } from "./utils";
+import { targetIsImg, targetIsSvg, getFullName, setOverflow } from "./utils";
 
-export const onClickCard = (e, setScaledImage) => {
+export const onClickCard = (e, setGalleryState) => {
   if (targetIsImg(e.target)) {
-    setScaledImage((prev) => ({
-      imageUrl: e.target.src,
-      name: e.target.alt,
-      position: setCurrentScroll(),
-    }));
-    document.body.style.overflow = "hidden";
+    setGalleryState((cards) => {
+      const newCards = cards.map((person) => {
+        if (getFullName(person.name, person.surname) == e.target.alt) {
+          return { ...person, isScaledImage: true };
+        } else return person;
+      });
+
+      return newCards;
+    });
+    setOverflow(document.body, true);
   } else if (targetIsSvg(e.target)) {
-    console.log("liked");
+    onClickLike(e.target.closest("svg"), setGalleryState);
   } else return;
 };
 
-export const onClickScaledImage = (e, setScaledImage) => {
+export const onClickScaledImage = (e, setGalleryState) => {
   if (targetIsImg(e.target)) {
-    console.log("image");
   } else if (targetIsSvg(e.target)) {
-    console.log("like");
+    onClickLike(e.target.closest("svg"), setGalleryState);
   } else {
-    setScaledImage(null);
-    document.body.style.overflow = "";
+    setGalleryState((cards) => {
+      return cards.map((person) => {
+        return { ...person, isScaledImage: false };
+      });
+    });
+    setOverflow(document.body, false);
     return;
   }
+};
+
+export const onClickLike = (target, setGalleryState) => {
+  setGalleryState((cards) => {
+    const newCards = cards.map((person) => {
+      if (target.id == person.id) {
+        return { ...person, isLiked: !person.isLiked };
+      } else return person;
+    });
+
+    return newCards;
+  });
 };

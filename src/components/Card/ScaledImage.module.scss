@@ -61,10 +61,8 @@
   }
 
   .filled {
-    opacity: 0;
-  }
-  .empty {
     fill: white;
+    transition: var(--transition02s);
   }
 }
 

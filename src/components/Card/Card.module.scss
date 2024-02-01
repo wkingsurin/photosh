@@ -52,12 +52,7 @@
   }
 
   .filled {
-    opacity: 0;
-    fill: var(--red);
-    transition: var(--transition02s);
-  }
-  .empty {
-    opacity: 1;
+    fill: black;
     transition: var(--transition02s);
   }
 }
