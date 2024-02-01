@@ -1,12 +1,14 @@
 import mainStyles from "./Main.module.scss";
+import { useState } from "react";
 
-import { Card } from "../Card";
-import { ScaledImage } from "../ScaledImage/ScaledImage";
+import { peopleRu } from "../../people";
 
-import { peopleRu, peopleEu } from "../../people";
-import { getPeopleRu } from "../../api";
+import { Card, ScaledImage } from "../Card";
+import { onClickCard, onClickScaledImage } from "../../handlers";
 
 export function Main() {
+  const [scaledImage, setScaledImage] = useState(null);
+
   return (
     <main className={mainStyles.main}>
       <section className={mainStyles.section}>
@@ -18,12 +20,22 @@ export function Main() {
                   key={person.id}
                   image={person.imageUrl}
                   name={person.name + " " + person.surname}
+                  onClickCard={onClickCard}
+                  setScaledImage={setScaledImage}
                 />
               );
             })}
           </div>
         </div>
-        {/* <ScaledImage /> */}
+        {scaledImage && (
+          <ScaledImage
+            imageUrl={scaledImage.imageUrl}
+            name={scaledImage.name}
+            position={scaledImage.position}
+            onClickScaledImage={onClickScaledImage}
+            setScaledImage={setScaledImage}
+          />
+        )}
       </section>
     </main>
   );

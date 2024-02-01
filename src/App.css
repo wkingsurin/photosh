@@ -18,6 +18,9 @@
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
